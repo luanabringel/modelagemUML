@@ -2,6 +2,7 @@ Main
 association Prog2pedia
 ---
 ---
++ main(args:str[]):void
 ---
 
 Prog2pedia
