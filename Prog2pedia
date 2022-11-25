@@ -1,0 +1,46 @@
+Main
+association Prog2pedia
+---
+---
+---
+
+Prog2pedia
+composes Pagina, Bordado
+---
+- paginas: HashMap<String, Pagina>
+- colaboradores: HashMap<String, Colaborador>
+---
++ Prog2pedia()
++ cadastrarPagina(titulo:str, conteudo:obj):void
++ lerPagina(titulo:str):str //retorna o conteudo da pagina
++ editarPagina(titulo:str, conteudo:str):void
++ cadastrarColaborador(email:str, colaborador:obj):void
++ adicionarColaboradorEspecial(titulo:str, colaborador:str):void
++ listarColaboradores():str //retorna a lista de colaboradores
++ listarHistoricoEdicoes():str //retorna o historico de edições de paginas
++ adicionarTemas(titulo:str, tema:str):void
++ listarPaginaTema(tema:str):str //retorna a lista de paginas com o tema selecionado
+---
+
+Pagina 
+aggregates Colaborador
+---
+- titulo:str
+- emailColaborador:str
+- tema:str
+---
++ Pagina(titulo:str, emailColaborador:str)
++ Pagina(titulo:str, emailColaborador:str, tema:str)
++ editarPagina(conteudo:str):void
++ adicionarTemas(tema:str):void
++ toString():str //retorna a pagina
+---
+
+Colaborador
+---
+- nome:str
+- emailColaborador:str
+---
++ Colaborador(nome:str, emailColaborador:str)
++ toString():str //retorna o colaborador
+---
