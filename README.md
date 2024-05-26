@@ -1,1 +1,3 @@
-# modeligado - disciplina Programação 2 (modelagem - UML)
+# Modelagens - UML:
+-  modeligado - disciplina "Programação 02"
+-  diagrama - disciplina "Projeto de Software"
